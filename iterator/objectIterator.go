@@ -8,7 +8,7 @@ import "fmt"
 
 type ObjectIterator struct {
 	objectGroup *ObjectGroup // 想要实现 Iterator 要求 ObjectGroup 提供 Getter 方法
-	objectIndex int // 想要实现 Iterator 要求 ObjectGroup 可索引
+	objectIndex int          // 想要实现 Iterator 要求 ObjectGroup 可索引
 }
 
 func (iter *ObjectIterator) HasNext() bool {
