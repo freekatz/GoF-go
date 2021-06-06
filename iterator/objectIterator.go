@@ -19,7 +19,7 @@ func (iter *ObjectIterator) Next() (*Object, error) {
 	if !iter.HasNext() {
 		return nil, fmt.Errorf("There has no next object.\n")
 	}
-	o := iter.objectGroup.GetObject(iter.objectIndex)
+	o, _ := iter.objectGroup.GetObject(iter.objectIndex)
 	iter.objectIndex++
 	return o, nil
 }

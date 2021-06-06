@@ -8,7 +8,7 @@ import "fmt"
 
 type ObjectGroup struct {
 	objects  []*Object
-	capacity int
+	capacity int // group max size
 }
 
 func NewObjectGroup(capacity int) *ObjectGroup {
@@ -31,8 +31,11 @@ func (og *ObjectGroup) Capacity() int {
 	return og.capacity
 }
 
-func (og *ObjectGroup) GetObject(index int) *Object {
-	return og.objects[index]
+func (og *ObjectGroup) GetObject(index int) (*Object, error) {
+	if index >= og.Size() {
+		return nil, fmt.Errorf("index overflow with object group's size: %d.\n", og.Size())
+	}
+	return og.objects[index], nil
 }
 
 func (og *ObjectGroup) AddObject(o *Object) error {
