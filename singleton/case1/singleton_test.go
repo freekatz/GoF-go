@@ -38,5 +38,6 @@ func concurrencyTest() {
 
 	singleton3 := GetInstance()
 
-	fmt.Println(singleton1.CreateDate, singleton3.CreateDate, singleton1 == singleton3)
+	fmt.Println(singleton1.CreateDate, singleton3.CreateDate, singleton1 == singleton3, singleton2 == singleton3)
+
 }
