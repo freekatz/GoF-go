@@ -1,4 +1,4 @@
-package builder
+package case2
 
 type IPv4Packet struct {
 	IPPacket
