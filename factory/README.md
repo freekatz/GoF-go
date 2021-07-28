@@ -6,11 +6,11 @@ Factory Method 模式是 Template Method 模式的一个特例, 即在模板方�
 
 本实例中, `Object` 接口定义 `DoSomething()`, `ObjectFactory` 接口定义生成 `Object` 的方法, `ObjectFactoryTemplate` 实现生成 `Object` 的模板方法, 定义逻辑流程
 
-`SimpleObject` 实现 `Object`, `SimpleObjectFactory` 实现 `ObjectFactoryTemplate`
+`SimpleObject` 实现 `Object`, `SimpleObjectFactory` 实现 `ObjectFactory`
 
 `Object` 定义了在 Factory Method 模式中生成的实例所拥有的行为, 这些行为最终由 `SimpleObject` 这些子类来实现
 
-`ObjectFactory` 与 `SimpleObjectFactory` 的关系和上面两者类似, `ObjectFactoryTemplate` 则定义了 Factory 模板方法
+`ObjectFactory` 与 `SimpleObjectFactory` 的关系和上面两者类似, `ObjectFactoryTemplate` 则定义了用于生成 Object 类型的 Factory 模板方法
 
 > Factory Method 模式是 Template Method 模式的一个特例
 > 
