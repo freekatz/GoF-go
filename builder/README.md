@@ -6,7 +6,7 @@
 
 ## case2
 
-[case2](case1) 展示了一个更加灵活的 Builder 模式示例，它不依赖 builder 方法的调用顺序
+[case2](./case2) 展示了一个更加灵活的 Builder 模式示例，它不依赖 builder 方法的调用顺序
 
 它用来构建 `Ethernet`, `IPv4` 和 `IPv6` 数据包的例子 (省略了很多详细字段).
 
